@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-// import Fade from 'react-reveal/Fade';
+import { Down } from '../icons/Icon'
+import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
 // import down from './down.png'
 
 
@@ -11,24 +13,33 @@ const Section = ({ title, order, touchless, backgroundImageDesktop, backgroundIm
             <ItemText>
                 {/* <Fade bottom> */}
                 <Title>{title}</Title>
-                <Order>
-                    <Online>{order}</Online>
-                    <Touchless>{touchless}</Touchless>
-                </Order>
+                <Zoom>
+                    <Order>
+                        <Online>{order}</Online>
+                        <Touchless>{touchless}</Touchless>
+                    </Order>
+                </Zoom>
                 {/* </Fade> */}
 
             </ItemText>
             <Buttons>
                 <ButtonGroup>
-                    <LeftButton>{leftButton}</LeftButton>
-                    {rightButton &&
-                        <RightButton>{rightButton}</RightButton>
-                    }
+                    <Fade left>
+                        <LeftButton>{leftButton}</LeftButton>
+                    </Fade>
+                    <Fade right>
+                        {rightButton &&
+                            <RightButton>{rightButton}</RightButton>
+                        }
+                    </Fade>
                 </ButtonGroup>
-                <Sign>
-                    {/* <img src={down} alt="" /> */}
-                </Sign>
+                <Animate>
+                    <DownTouch>
+                        <Down />
+                    </DownTouch>
+                </Animate>
             </Buttons>
+
         </Wrap>
     )
 }
@@ -41,6 +52,7 @@ flex-direction: column;
 justify-content: space-between;
 width: 100vw;
 height: 100vh;
+overflow-y: hidden;
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
@@ -53,38 +65,40 @@ const ItemText = styled.div`
 margin-top: 6.5rem;
 `
 const Title = styled.div`
+text-align: center;
 font-size: 2.5rem;
 font-weight: 600;
 letter-spacing: 3px;
 color: #393C41;
 position: relative;
 animation-name: title;
-animation-duration: 2s;  
-animation-fill-mode: forwards;
+animation-duration: 2s;
 `
 const Order = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
+font-size: 15.5px;
 margin-top: 0.5rem;
-animation-name: order;
+position: relative;
+animate-name: order;
 animation-duration: 2s;
-
 `
 const Online = styled.div`
 color: #6A6D73;
 `
 const Touchless = styled.div`
 margin-left: 0.4rem;
-text-decoration: underline;
+border-bottom: 1px solid #6A6D73;
 color: #6A6D73;
 &:hover {
-    font-weight: 600;
+    border-bottom: 2px solid black;
+    color: #393C41;
 }
 cursor: pointer;
 `
 const Buttons = styled.div`
-margin-top: 55vh;
+margin-top: 53vh;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -128,11 +142,17 @@ cursor: pointer;
     
 }
 `
-const Sign = styled.div`
-
-// -ms-transform: rotate(90deg); /* IE 9 */
-// transform: rotate(90deg);
-// animation: animateDown infinite 1.5s;
-// overflow-x: hidden;
+const Animate = styled.div`
+position: absolute;
+bottom: -2rem;
+width: 100%;
+animation: animateDown infinite 1.5s;
+`
+const DownTouch = styled.svg`
+width: 100%;
+height: 5rem;
+margin-top: 1rem;
+-ms-transform: rotate(90deg);
+transform: rotate(90deg);
 `
 

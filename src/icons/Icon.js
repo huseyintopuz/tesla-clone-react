@@ -19,7 +19,7 @@ export const Tesla = () => {
 export const Close = () => {
     return (
         <Svg>
-            <g stroke="var(--tds-icon--fill, #171a20)" stroke-width="1.5" stroke-linecap="round"><line x1="10" y1="10" x2="20" y2="20"></line><line x1="20" y1="10" x2="10" y2="20"></line></g>
+            <g stroke="var(--tds-icon--fill, #171a20)" ><line x1="15" y1="15" x2="30" y2="30"></line><line x1="30" y1="15" x2="15" y2="30"></line></g>
         </Svg>
     )
 }
@@ -27,15 +27,20 @@ export const Close = () => {
 export const Down = () => {
     return (
         <Svg>
-            <path stroke="var(--tds-icon--fill, #171a20)" stroke-width="1.5" d="M10.5 17.5l4.5-4 4.5 4" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="rotate(90 90 90)"></path>
+            <path stroke="var(--tds-icon--fill, #171a20)" strokeWidth="1.5" d="M10.5 17.5l4.5-4 4.5 4" fill="none" strokeLinecap="round" strokeLinejoin="round" transform="rotate(90 90 90)"></path>
         </Svg>
     )
 }
 
-export const Next3 = () => {
+export const World = () => {
     return (
-        <Svg>
+        <svg viewBox="0 0 30 30">
             <path d="M15.5 6v4.3A17 17 0 0022 9v1c-1.9.8-4 1.2-6.5 1.2v3.3h9v1h-9v3.3c2.3 0 4.3.4 6.1 1l.4.2v1c-2-.9-4.3-1.3-7-1.3h.5V24h-1v-4.3A17 17 0 008 21v-1c2-.8 4.3-1.3 7-1.3h-.5v-3.2h-9v-1h9v-3.3c-2.5 0-4.6-.4-6.5-1.2V9c1.9.8 4 1.3 6.5 1.3V6h1z" fill="var(--tds-icon--fill, #171a20)"></path><path d="M15 6.3c.6 0 1.1.2 1.6.5.6.5 1 1.1 1.5 1.9.9 1.6 1.4 3.8 1.4 6.3s-.5 4.7-1.4 6.3c-.4.8-1 1.4-1.5 1.9-.5.3-1 .6-1.6.6-.6 0-1.1-.3-1.6-.6-.6-.5-1-1.1-1.5-1.9-.9-1.6-1.4-3.8-1.4-6.3s.5-4.7 1.4-6.3c.4-.8 1-1.4 1.5-1.9.5-.3 1-.5 1.6-.5z" stroke="var(--tds-icon--fill, #171a20)" fill="none"></path><path d="M15 5a10 10 0 110 20 10 10 0 010-20zm0 1.5a8.5 8.5 0 100 17 8.5 8.5 0 000-17z" fill="var(--tds-icon--fill, #171a20)"></path>
-        </Svg>
+        </svg>
+    )
+}
+export const Chat = () => {
+    return (
+        <svg width="28" height="26" xmlns="http://www.w3.org/2000/svg" ><g fill="#171A20"><path d="M23.8.85H4.2A3.85 3.85 0 00.35 4.7v12.6l.007.235A3.85 3.85 0 004.2 21.15h3.15v2.859c0 .332.117.653.33.907l.122.13c.515.478 1.317.51 1.87.047l4.709-3.943H23.8a3.85 3.85 0 003.85-3.85V4.7A3.85 3.85 0 0023.8.85zM4.2 2.95h19.6c.966 0 1.75.784 1.75 1.75v12.6a1.75 1.75 0 01-1.75 1.75h-9.927a.7.7 0 00-.45.163L9.45 22.54v-2.79a.7.7 0 00-.7-.7H4.2a1.75 1.75 0 01-1.75-1.75V4.7c0-.966.784-1.75 1.75-1.75z"></path><path d="M14 9.6a1.4 1.4 0 110 2.8 1.4 1.4 0 010-2.8zm-5.6 0a1.4 1.4 0 110 2.8 1.4 1.4 0 010-2.8zm11.2 0a1.4 1.4 0 110 2.8 1.4 1.4 0 010-2.8z"></path></g></svg>
     )
 }

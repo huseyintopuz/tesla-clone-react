@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Feature23 = ({ range, text, range2, text2, backgroundImageDesktop, text3 }) => {
+const Feature23 = () => {
     return (
         <Wrap>
             <GoAnyWhere>
@@ -27,7 +27,7 @@ const Feature23 = ({ range, text, range2, text2, backgroundImageDesktop, text3 }
                     </OrderNow>
                 </Travel>
             </GoAnyWhere>
-            <BlueTesla bgImageDesktop={backgroundImageDesktop}>
+            <BlueTesla>
                 <BlueBox>
                     <BlueMaxRange>
                         <BlueNumber>
@@ -49,12 +49,7 @@ const Feature23 = ({ range, text, range2, text2, backgroundImageDesktop, text3 }
                     </BlueRange>
                     <ChargePlaces>
                         <BlueNumber>
-                            <div>
-                                
-                                <svg viewBox="0 0 28 28">
-      <use href="#tcl-badge-model-x-falcon-wings"></use>
-    </svg>
-                            </div>
+                            <Falcon />
                         </BlueNumber>
                         <p>Falcon Wing doors</p>
                     </ChargePlaces>
@@ -116,6 +111,10 @@ span {
     padding-left: 3px;
     font-size: 26px;
 }
+`
+const Falcon = styled.div`
+width: 32px;
+height: 32px;
 `
 const BlueRange = styled.div`
 padding: 0 20px;

@@ -11,13 +11,11 @@ import * as serviceWorker from './serviceWorker';
 // import Car from './cars/Car'
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.Fragment>
     <Provider store={store}>
-      
         <App />
-      
     </Provider>
-  </React.StrictMode>,
+  </React.Fragment>,
   document.getElementById('root')
 );
 

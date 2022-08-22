@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import {
-    Link
-} from "react-router-dom";
-// import Car from '../cars/Car'
+import { Link } from "react-router-dom";
 import { Tesla, World } from '../icons/Icon'
 import CloseIcon from '@mui/icons-material/Close';
 import { selectMenus } from '../features/car/menuSlices';

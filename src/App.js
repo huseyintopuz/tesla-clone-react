@@ -2,8 +2,7 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  useLocation
+  Route
 } from "react-router-dom";
 import './App.css';
 import Home from './components/Home';
@@ -15,11 +14,8 @@ import SolarRoof from './cars/solarroof'
 import SolarPanels from './cars/solarpanels'
 import { selectCars } from './features/car/carSlice'
 import { useSelector } from 'react-redux';
-// import Car from './cars/Car'
-
 
 const App = () => {
-  // let location = useLocation();
   document.title = "Tesla.com"
   const cars = useSelector(selectCars)
 
@@ -61,10 +57,9 @@ const App = () => {
     <div className="App">
       <Router>
         <Routes>
-          {/* location={location} */}
           <Route exact path="/" element={<Home />} />
           {cars && cars.map((car, index) => (
-            <Route path={`/${slugify(car)}`} element={getElement(slugify(car))} />
+            <Route key={index} path={`/${slugify(car)}`} element={getElement(slugify(car))} />
           ))}
         </Routes>
       </Router>
